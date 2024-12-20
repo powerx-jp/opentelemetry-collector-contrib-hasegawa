@@ -79,6 +79,7 @@ func (r *pReceiver) Start(ctx context.Context, host component.Host) error {
 	r.cancelFunc = cancel
 
 	logger := internal.NewZapToGokitLogAdapter(r.settings.Logger)
+	r.settings.Logger.Error("Starting Prometheus receiver in hasegawa customized binary!")
 
 	err := r.initPrometheusComponents(discoveryCtx, logger, host)
 	if err != nil {

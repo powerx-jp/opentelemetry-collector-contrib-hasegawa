@@ -43,3 +43,5 @@ integration-coverage.html
 go.work*
 
 /result
+
+/_build
